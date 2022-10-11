@@ -2,18 +2,19 @@ import java.util.*;
 
 public class App {
     public static void main(String[] args) {
-        
-        System.out.println("---|Terminal do T1|---");
-        Scanner sc = new Scanner(System.in);
+        int opcao;
 
-        System.out.println("Escolha uma opcao abaixo:");
-        System.out.println("1 = Digitar manualmente entrada da gramatica.");
-        System.out.println("2 = Utilizar uma entrada de gramatica setada.");
-        System.out.println("0 = Sair.");
-        System.out.println();
-        int opcao = Integer.parseInt(sc.nextLine());
+        do {
 
-        while (opcao != 0) {
+            System.out.println("---|Terminal do T1|---");
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Escolha uma opcao abaixo:");
+            System.out.println("1 = Digitar manualmente entrada da gramatica.");
+            System.out.println("2 = Utilizar uma entrada de gramatica setada.");
+            System.out.println("0 = Sair.");
+            System.out.println();
+            opcao = Integer.parseInt(sc.nextLine());
 
             String simboloProducoes, simboloInicio;
 
@@ -33,7 +34,7 @@ public class App {
                 System.out.println("Digite abaixo o simbolo de inicio de producoes (Exemplo.: S):");
                 simboloInicio = sc.nextLine();
 
-                System.out.println("Digite abaixo o conjunto de producoes que engloba a gramatica:");
+                System.out.println("Digite abaixo o conjunto de producoes que engloba a gramatica separados por um espaco (Exemplo.: S:aX|bZ):");
                 String linhaConjuntoProducoes = sc.nextLine();
                 String[] arrayConjuntoProducoes = linhaConjuntoProducoes.split(" ");
 
@@ -53,9 +54,10 @@ public class App {
                 Algoritmo algoritmo = new Algoritmo(arrayNaoTerminais, arrayTerminais, simboloProducoes, simboloInicio, arrayConjuntoProducoes);
                 algoritmo.Executa();
 
-            }
-        }
+            } 
+            
+        } while (opcao != 0);
 
-        sc.close();
+        //sc.close();
     }
 }
