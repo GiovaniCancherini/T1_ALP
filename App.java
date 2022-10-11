@@ -6,9 +6,9 @@ public class App {
         System.out.println("---|Terminal do T1|---");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Escolha uma opção abaixo:");
-        System.out.println("1 = Digitar manualmente entrada da grámatica.");
-        System.out.println("2 = Utilizar uma entrada de grámatica setada.");
+        System.out.println("Escolha uma opcao abaixo:");
+        System.out.println("1 = Digitar manualmente entrada da gramatica.");
+        System.out.println("2 = Utilizar uma entrada de gramatica setada.");
         System.out.println("0 = Sair.");
         System.out.println();
         int opcao = Integer.parseInt(sc.nextLine());
@@ -19,21 +19,21 @@ public class App {
 
             if (opcao == 1) {
 
-                System.out.println("Digite abaixo os símbolos não-terminais separados por um espaço (em maiúsculas):");
+                System.out.println("Digite abaixo os simbolos nao-terminais separados por um espaco (em maiusculas):");
                 String linhaNaoTerminais = sc.nextLine();
                 String[] arrayNaoTerminais = linhaNaoTerminais.split(" ");
         
-                System.out.println("Digite abaixo os símbolos terminais separados por um espaço (em minúsculas):");
+                System.out.println("Digite abaixo os simbolos terminais separados por um espaco (em minusculas):");
                 String linhaTerminais = sc.nextLine();
                 String[] arrayTerminais = linhaTerminais.split(" ");
 
-                System.out.println("Digite abaixo o símbolo que engloba o conjunto de produções (Exemplo.: P):");
+                System.out.println("Digite abaixo o simbolo que engloba o conjunto de producoes (Exemplo.: P):");
                 simboloProducoes = sc.nextLine();
 
-                System.out.println("Digite abaixo o símbolo de início de produções (Exemplo.: S):");
+                System.out.println("Digite abaixo o simbolo de inicio de producoes (Exemplo.: S):");
                 simboloInicio = sc.nextLine();
 
-                System.out.println("Digite abaixo o conjunto de produções que engloba a gramática:");
+                System.out.println("Digite abaixo o conjunto de producoes que engloba a gramatica:");
                 String linhaConjuntoProducoes = sc.nextLine();
                 String[] arrayConjuntoProducoes = linhaConjuntoProducoes.split(" ");
 
