@@ -17,7 +17,7 @@ public class Algoritmo {
 
     public void ToStringGramatica() {
         //TODO: G = ({ S, B, C}, { a, b }, P, S)
-        System.out.print("G = ({arrayNaoTerminais}, {arrayTerminais}, simboloProducoes, simboloInicio)");
+        System.out.println("G = ({arrayNaoTerminais}, {arrayTerminais}, simboloProducoes, simboloInicio)");
         System.out.println();
     }
 
